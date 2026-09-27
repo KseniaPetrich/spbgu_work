@@ -35,7 +35,6 @@ int main() {
     // Выводится отсортированный массив
     print_array("Массив после сортировки:", arr, size);
     
-    delete[] arr; 
     return 0;
 }
 
