@@ -1,7 +1,9 @@
 #include <iostream>
 #include <utility>
-#include <vector>
 
+// Вывод массива 
+void print_array(const char* const comment, int* arr, const int size);
+// Сортировка массива
 void my_sort(int *arr, const int size);
 
 // Интерфейс пользователя должен быть на русском языке
@@ -15,7 +17,7 @@ int main() {
         return 1;
     }
 
-    std::vector<int> arr(size);
+    int* arr = new int[size];
     std::cout << "Введите " << size << " целых чисел через пробел: ";
     for (int i = 0; i < size; i++) {
         if (!(std::cin >> arr[i])) {
@@ -23,24 +25,26 @@ int main() {
             return 1;
         }
     }
+    
+    // Выводится исходный массив
+    print_array("Массив до сортировки:", arr, size);
 
     // Вызывается void my_sort(int* arr, int size)
-    std::cout << "Массив до сортировки:";
-    for (int i = 0; i < size; i++) {
-        std::cout << ' ' << arr[i];
-    }
-    std::cout << std::endl;
+    my_sort(arr, size);
 
-    my_sort(arr.data(), size);
-
-    // Выводится первоначальный массив и отсортированный
-    std::cout << "Массив после сортировки:";
-    for (int i = 0; i < size; i++) {
-        std::cout << ' ' << arr[i];
-    }
-    std::cout << std::endl;
+    // Выводится отсортированный массив
+    print_array("Массив после сортировки:", arr, size);
 
     return 0;
+}
+
+// Вывод массива
+void print_array(const char* const comment, int* arr, const int size) {
+    std::cout << comment;
+    for (int i = 0; i < size; i++) {
+        std::cout << ' ' << arr[i];
+    }
+    std::cout << std::endl;
 }
 
 // Сортировка пузырьком по возрастанию
