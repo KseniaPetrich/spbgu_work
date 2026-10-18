@@ -7,3 +7,23 @@ void KPet::exit() {
 
 void KPet::study() {
 }
+
+void KPet::study_sum() {
+    // TODO
+}
+
+void KPet::study_subtract() {
+    // TODO
+}
+
+void KPet::study_multiply() {
+    // TODO
+}
+
+void KPet::study_divide() {
+    // TODO
+}
+
+void KPet::study_go_back() {
+    // TODO
+}
