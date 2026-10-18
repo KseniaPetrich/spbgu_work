@@ -1,10 +1,14 @@
-namespace KPet {
-    void exit();
-    void study();
+#pragma once
 
-    void study_sum();
-    void study_subtract();
-    void study_multiply();
-    void study_divide();
-    void study_go_back();
+#include "menu.hpp"
+
+namespace KPet {
+    const MenuItem* show_menu(const MenuItem* current);
+    const MenuItem* exit(const MenuItem* current);
+
+    const MenuItem* study_sum(const MenuItem* current);
+    const MenuItem* study_subtract(const MenuItem* current);
+    const MenuItem* study_multiply(const MenuItem* current);
+    const MenuItem* study_divide(const MenuItem* current);
+    const MenuItem* study_go_back(const MenuItem* current);
 }
