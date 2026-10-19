@@ -11,10 +11,3 @@ namespace KPet {
         const int children_count;
     };
 }
-
-int i1
-double d1
-char c1
-int i2
-char c2
-int i3
