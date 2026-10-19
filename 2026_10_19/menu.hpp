@@ -2,7 +2,7 @@
 
 namespace KPet {
     struct MenuItem {
-        const char* const title;
+        const char* title;
         const MenuItem* (*func)(const MenuItem* current);
 
         const MenuItem* parent;

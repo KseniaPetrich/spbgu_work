@@ -20,32 +20,46 @@ const KPet::MenuItem* KPet::show_menu(const MenuItem* current) {
     return current->children[user_input];
 }
 
-const KPet::MenuItem* KPet::study_sum(const MenuItem* current) {
+const KPet::MenuItem* KPet::algebra_sum(const MenuItem* current) {
     // TODO
     std::cout << current->title << std::endl;
     return current->parent;
 }
 
-const KPet::MenuItem* KPet::study_subtract(const MenuItem* current) {
+const KPet::MenuItem* KPet::algebra_subtract(const MenuItem* current) {
     // TODO
     std::cout << current->title << std::endl;
     return current->parent;
 }
 
-const KPet::MenuItem* KPet::study_multiply(const MenuItem* current) {
+const KPet::MenuItem* KPet::algebra_multiply(const MenuItem* current) {
     // TODO
     std::cout << current->title << std::endl;
     return current->parent;
 }
 
-const KPet::MenuItem* KPet::study_divide(const MenuItem* current) {
+const KPet::MenuItem* KPet::algebra_divide(const MenuItem* current) {
     // TODO
     std::cout << current->title << std::endl;
     return current->parent;
 }
 
-const KPet::MenuItem* KPet::study_go_back(const MenuItem* current) {
-    // TODO
+const KPet::MenuItem* KPet::go_back_to_subjects(const MenuItem* current) {
+    return current->parent->parent; 
+}
+
+const KPet::MenuItem* KPet::go_back_to_main(const MenuItem* current) {
+    return current->parent->parent; 
+}
+
+const KPet::MenuItem* KPet::matan_derivative(const MenuItem* current) {
+    //TODO
     std::cout << current->title << std::endl;
-    return current->parent->parent;
+    return current->parent; 
+}
+
+const KPet::MenuItem* KPet::matan_integral(const MenuItem* current) {
+    //TODO
+    std::cout << current->title << std::endl;
+    return current->parent; 
 }
